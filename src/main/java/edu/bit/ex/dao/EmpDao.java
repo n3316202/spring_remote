@@ -12,25 +12,26 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import edu.bit.ex.vo.EmpVO;
 
 @Repository
-public class EmpDao {	
+public class EmpDao {
+	
+	@Autowired
 	DataSource dataSource;
 	
 	public EmpDao() {
 		// TODO Auto-generated constructor stub
 		
-		try {
-			Context context = new InitialContext();
-			dataSource = (DataSource) context.lookup("java:comp/env/jdbc/oracle");
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
+		/*
+		 * try { Context context = new InitialContext(); dataSource = (DataSource)
+		 * context.lookup("java:comp/env/jdbc/oracle"); } catch (Exception e) { // TODO:
+		 * handle exception e.printStackTrace(); }
+		 */
 	}
 	
 	public ArrayList<EmpVO> selectAll() {
