@@ -32,4 +32,13 @@ public class EmpController {
 		return "/emp/list";
 	}
 	
+	@RequestMapping("/emp/tables")
+	public String tables(Model model) {
+		System.out.println("list()");
+		System.out.println(empService.list());
+		model.addAttribute("empList",empService.list());
+		
+		return "/emp/tables";
+	}
+	
 }
