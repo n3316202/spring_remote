@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import edu.bit.ex.vo.EmpVO;
 
 
-public interface EmpService {	
-	public List<EmpVO> list();
-
+public interface LoginService {	
+	void login();
 }

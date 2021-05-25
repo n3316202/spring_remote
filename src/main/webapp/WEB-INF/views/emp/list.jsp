@@ -27,8 +27,7 @@
                     <td>${emp.deptno}</td>
                 </tr>
             </c:forEach>
-        </table>
-
+	
 
 </body>
 </html>
